@@ -4,7 +4,5 @@ import org.springframework.stereotype.Service
 
 @Service
 class HelloService {
-    fun getHello(name: String = "World"): String {
-        return "Hello $name with Service"
-    }
+    fun getHello(name: String = "World"): String = "Hello $name with Service"
 }

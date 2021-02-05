@@ -15,5 +15,5 @@ class HelloController(val helloService: HelloService) {
     fun helloKotlinDto(@RequestParam(value = "name", defaultValue = "World") name: String) = HelloDto("Hello $name")
 
     @GetMapping("/hello-service")
-    fun helloKotlinService(@RequestParam(value = "name", defaultValue = "World") name: String): String = helloService.getHello()
+    fun helloKotlinService(@RequestParam(value = "name", defaultValue = "World") name: String): String = helloService.getHello(name)
 }
