@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class HelloController(val helloService: HelloService) {
+
+
+
     @GetMapping("/hello")
     fun helloKotlin(@RequestParam(value = "name", defaultValue = "World") name: String): String = "Hello $name"
 
